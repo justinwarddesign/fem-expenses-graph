@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+</head>
+<body>
+  <div class="container flexX">
+    <header class="rounded flexY">
+      <div class="header__my-balance flexX">
+        <p>My balance</p>
+        <h3>$921.48</h3>
+      </div>
+      <div class="header__logo">
+        <a href=""><img src="images/logo.svg" alt=""></a>
+      </div>
+    </header>
+    <section class="graph-card rounded flexX">
+      <h1 class="graph-card__title">Spending - <span>Last 7 Days</span></h1>
+      <div class="graph">
+        <ul class="flexY">
+          <li>
+            <p>mon</p>
+            <div class="bar"></div>
+            <div class="amount">$17.45</div>
+          </li>
+          <li>
+            <p>tue</p>
+            <div class="bar"></div>
+            <div class="amount">$134.91</div>
+          </li>
+          <li>
+            <p>wed</p>
+            <div class="bar"></div>
+            <div class="amount">$52.36</div>
+          </li>
+          <li>
+            <p>thu</p>
+            <div class="bar"></div>
+            <div class="amount">$31.07</div>
+          </li>
+          <li>
+            <p>fri</p>
+            <div class="bar"></div>
+            <div class="amount">$23.39</div>
+          </li>
+          <li>
+            <p>sat</p>
+            <div class="bar"></div>
+            <div class="amount">$43.28</div>
+          </li>
+          <li>
+            <p>sun</p>
+            <div class="bar"></div>
+            <div class="amount">$25.48</div>
+          </li>
+        </ul>
+      </div>
+      <hr/>
+      <div class="graph-card__footer flexY">
+        <div class="graph-card__footer--my-total flexX">
+          <p>Total this month</p>
+          <h1 class="total">$478.33</h1>
+        </div>
+        <div class="graph-card__footer--last-month flexX">
+          <h5>+24%</h5>
+          <p>from last month</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

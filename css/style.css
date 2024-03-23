@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+:root{
+    --main-font: "DM Sans", sans-serif;
+
+    --clr-dark-brown: hsl(25, 47%, 15%);
+    --clr-medium-brown: hsl(28, 10%, 53%);
+    --clr-cream: hsl(27, 66%, 92%);
+    --clr-very-pale-orange: hsl(33, 100%, 98%);
+    --clr-soft-red: hsl(10, 79%, 65%);
+    --clr-cyan: hsl(186, 34%, 60%);
+    /* utilities */
+    --rounded: 1.5rem;
+    --sz-lg: 2rem;
+    --sz-md: 1.5rem;
+    --sz-sm: .5rem;
+}
+
+body{
+    font-size: 18px;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    color: var(--clr-very-pale-orange);
+    background-color: var(--clr-cream);
+}
+.rounded{
+    border-radius: var(--rounded);
+}
+.flexX{
+    display: flex;
+    flex-direction: column;
+}
+.flexY{
+    display: flex;
+    flex-direction: row;
+}
+hr{
+    color: red;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 37rem;
+    gap: var(--sz-md);
+}
+
+header{
+    padding: var(--sz-lg);
+    background-color: var(--clr-soft-red);
+    justify-content: space-between;
+    align-items: center;
+}
+header p{
+    font-size: 1.1rem;
+}
+header h3{
+    font-size: 2.2rem;
+}
+
+.graph-card{
+    padding: var(--sz-lg);
+    gap: var(--sz-lg);
+    color: var(--clr-dark-brown);
+    background-color: var(--clr-very-pale-orange);
+}
+.graph-card__title{
+    font-size: 2rem;
+    margin-bottom: var(--sz-sm);
+}
+.graph-card p{
+    font-size: .9rem;
+}
+.graph-card .total{
+    font-size: 2.8rem;
+}
+.graph-card__footer{
+    justify-content: space-between;
+    align-items: center;
+}
+.graph-card p{
+    color: var(--clr-medium-brown);
+}
+.graph ul{
+    justify-content: space-between;
+}
+.graph li{
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--sz-sm);
+}
+.graph li .bar{
+    width: 3.3rem;
+    border-radius: .5rem;
+    background-color: var(--clr-soft-red);
+    cursor: pointer;
+}
+.graph li:not(.active):hover .bar{
+    opacity: 0.7;
+    transition: opacity .3s;
+}
+.graph li.active .bar{
+    background-color: var(--clr-cyan);
+}
+.graph li:nth-of-type(1) .bar{
+    height: 4rem;
+}
+.graph li:nth-of-type(2) .bar{
+    height: 6rem;
+}
+.graph li:nth-of-type(3) .bar{
+    height: 8rem;
+}
+.graph li:nth-of-type(4) .bar{
+    height: 5rem;
+}
+.graph li:nth-of-type(5) .bar{
+    height: 3rem;
+}
+.graph li:nth-of-type(6) .bar{
+    height: 7rem;
+}
+.graph li:nth-of-type(7) .bar{
+    height: 5rem;
+}
+.graph li.active .bar{
+    background-color: var(--clr-cyan) !important;
+}
+.graph li .amount{
+    background-color: var(--clr-dark-brown);
+    color: var(--clr-cream);
+    padding: .3rem .5rem;
+    border-radius: var(--sz-sm);
+    font-size: .8em;
+    transform: scale(0);
+}
+.graph li.active .amount{
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .1s;
+}
+
+
+.graph-card__footer--last-month{
+    text-align: right;
+}
